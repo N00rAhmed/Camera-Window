@@ -8,9 +8,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/// <summary>
-/// Got a camera of 1280x720 and FPS 30
-/// </summary>
+// Got a camera of 1280x720 and FPS 30
+
 typedef struct {
 	SDL_Window* window;
 	SDL_Renderer* renderer;
@@ -26,7 +25,8 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 	AppState* app_state = malloc(sizeof(AppState));
 	*app_state = (AppState){
 		.width = 800,
-		.height = 600
+		.height = 600,
+
 	};
 	*appstate = app_state;
 
@@ -34,10 +34,10 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 		SDL_Log("couldnt initiliaze SDL: %s", SDL_GetError());
 		return SDL_APP_FAILURE;
 	}
+	//SDL_WINDOW_BORDERLESS
 	if (!SDL_CreateWindowAndRenderer("SDL3 Camera Demo", app_state->width, app_state->height, 0, &(app_state->window), &(app_state->renderer))) {
 		SDL_Log("couldnt create window/renderer: %s", SDL_GetError());
 		return SDL_APP_FAILURE;
-
 	}
 
 	SDL_CameraID* devices = SDL_GetCameras(&app_state->camera_count);
@@ -74,8 +74,8 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 
 		if (app_state->texture == NULL) {
 
-			//SDL_SetWindowSize(app_state->window, 300, 300);
-			SDL_SetWindowSize(app_state->window, frame->w, frame->h); // sets window size for camera window
+			SDL_SetWindowSize(app_state->window, 500, 300);
+			//SDL_SetWindowSize(app_state->window, frame->w, frame->h); // sets window size for camera window
 			app_state->width = frame->w;
 			app_state->height = frame->h;
 
