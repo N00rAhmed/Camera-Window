@@ -24,8 +24,11 @@ typedef struct {
 SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 	AppState* app_state = malloc(sizeof(AppState));
 	*app_state = (AppState){
-		.width = 800,
-		.height = 600,
+		.width = 500,
+		.height = 300,
+
+		//.width = 800,
+		//.height = 600,
 
 	};
 	*appstate = app_state;
@@ -74,7 +77,8 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 
 		if (app_state->texture == NULL) {
 
-			SDL_SetWindowSize(app_state->window, 500, 300);
+			SDL_SetWindowAlwaysOnTop(app_state->window, frame->w, frame->h); // window being sized from line 27-28
+			//SDL_SetWindowSize(app_state->window, 500, 300);
 			//SDL_SetWindowSize(app_state->window, frame->w, frame->h); // sets window size for camera window
 			app_state->width = frame->w;
 			app_state->height = frame->h;
