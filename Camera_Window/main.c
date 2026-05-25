@@ -27,6 +27,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 		.width = 500,
 		.height = 300,
 
+		//SDL_WINDOW_BORDERLESS | SDL_WINDOW_RESIZABLE
 		//.width = 800,
 		//.height = 600,
 
@@ -76,8 +77,10 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 	if (frame != NULL) {
 
 		if (app_state->texture == NULL) {
-
+			//SDL_SetWindowResizable
 			SDL_SetWindowAlwaysOnTop(app_state->window, frame->w, frame->h); // window being sized from line 27-28
+			SDL_SetWindowResizable(app_state->window, true); // resizes window
+
 			//SDL_SetWindowSize(app_state->window, 500, 300);
 			//SDL_SetWindowSize(app_state->window, frame->w, frame->h); // sets window size for camera window
 			app_state->width = frame->w;
