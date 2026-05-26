@@ -1,4 +1,4 @@
-# Camera_Window
+# Camera Window
 
 ### Introduction
 This project creates a window that accesses your laptops camera. It's a very simple project because it was meant to address a problem that I was having with OBS.
