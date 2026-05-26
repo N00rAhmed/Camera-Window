@@ -26,6 +26,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 	*app_state = (AppState){
 		.width = 500,
 		.height = 300,
+		
 		//SDL_NOFRAME
 		//SDL_WINDOW_BORDERLESS
 	
@@ -40,7 +41,8 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 		return SDL_APP_FAILURE;
 	}
 	//SDL_WINDOW_BORDERLESS
-
+	// to implement window flags remove 0
+	//SDL_WINDOW_BORDERLESS | SDL_WINDOW_RESIZABLE
 	if (!SDL_CreateWindowAndRenderer("SDL3 Camera Demo", app_state->width, app_state->height, 0, &(app_state->window), &(app_state->renderer))) {
 		SDL_Log("couldnt create window/renderer: %s", SDL_GetError());
 		return SDL_APP_FAILURE;
