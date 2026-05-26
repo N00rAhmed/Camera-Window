@@ -26,8 +26,9 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 	*app_state = (AppState){
 		.width = 500,
 		.height = 300,
-
-		//SDL_WINDOW_BORDERLESS | SDL_WINDOW_RESIZABLE
+		//SDL_NOFRAME
+		//SDL_WINDOW_BORDERLESS
+	
 		//.width = 800,
 		//.height = 600,
 
@@ -39,6 +40,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 		return SDL_APP_FAILURE;
 	}
 	//SDL_WINDOW_BORDERLESS
+
 	if (!SDL_CreateWindowAndRenderer("SDL3 Camera Demo", app_state->width, app_state->height, 0, &(app_state->window), &(app_state->renderer))) {
 		SDL_Log("couldnt create window/renderer: %s", SDL_GetError());
 		return SDL_APP_FAILURE;
@@ -80,6 +82,7 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 			//SDL_SetWindowResizable
 			SDL_SetWindowAlwaysOnTop(app_state->window, frame->w, frame->h); // window being sized from line 27-28
 			SDL_SetWindowResizable(app_state->window, true); // resizes window
+			//SDL_SetWindowBordered(app_state->window, false); // window borderless
 
 			//SDL_SetWindowSize(app_state->window, 500, 300);
 			//SDL_SetWindowSize(app_state->window, frame->w, frame->h); // sets window size for camera window
@@ -87,6 +90,7 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 			app_state->height = frame->h;
 
 			app_state->texture = SDL_CreateTexture(app_state->renderer, frame->format, SDL_TEXTUREACCESS_STREAMING, frame->w, frame->h);
+		
 		}
 		else {
 			SDL_UpdateTexture(app_state->texture, NULL, frame->pixels, frame->pitch);
