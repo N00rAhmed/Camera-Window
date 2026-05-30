@@ -3,7 +3,7 @@
 ### Introduction
 This project creates a window that accesses your laptops camera. It's a very simple project because it was meant to address a problem that I was having with OBS. For creating the `.exe` InnoSetup was used.
 
-i was getting this error when opening exe on diffrent laptop `the code execution cannot proceed because Ucrtbased.dll was not found`. realised reason for this was that I compiled project in Debug Mode in Visual Studio. In Debug Mode the Ucrtbased.dll isnt present for EXE but for Releases it is present. Switch to Release 
+i was getting this error when opening exe on diffrent laptop `the code execution cannot proceed because Ucrtbased.dll was not found`. realised reason for this was that I compiled project in Debug Mode in Visual Studio. In Debug Mode this dependency is used `Ucrtbased.dll`. This dependencies isnt installed by default on windows machines which is why the error was caused. In order to fix this issue you need to switch to Release. In Release `ucrt.dll` is used which is found by default on all windows machines.
 
 <img width="622" height="261" alt="image" src="https://github.com/user-attachments/assets/b38e798f-b1b1-4d92-8537-0dca9de80e2c" /> 
 
