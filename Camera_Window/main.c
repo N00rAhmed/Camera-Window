@@ -8,6 +8,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+
 // Got a camera of 1280x720 and FPS 30
 
 typedef struct {
@@ -74,6 +75,7 @@ SDL_AppResult SDL_AppInit(void** appstate, int argc, char** argv) {
 }
 
 SDL_AppResult SDL_AppIterate(void* appstate) {
+
 	AppState* app_state = appstate;
 
 	SDL_Surface *frame = SDL_AcquireCameraFrame(app_state->camera, NULL);
@@ -82,6 +84,7 @@ SDL_AppResult SDL_AppIterate(void* appstate) {
 
 		if (app_state->texture == NULL) {
 			//SDL_SetWindowResizable
+
 			SDL_SetWindowAlwaysOnTop(app_state->window, frame->w, frame->h); // window being sized from line 27-28
 			SDL_SetWindowResizable(app_state->window, true); // resizes window
 			//SDL_SetWindowBordered(app_state->window, false); // window borderless
