@@ -1,7 +1,7 @@
 # Camera Window
 
 ### Introduction
-This project accesses your laptops built in webcam and displays it in a window. It's a very simple project because it was meant to address a problem that I was having. For creating the `.exe` InnoSetup was used.
+This project accesses your laptops built in webcam and displays it in a window. I made this using C and SDL3 so its a pretty lightweight application. It's a very simple project because it was meant to address a problem that I was having. For creating the `.exe` InnoSetup was used.
 
 ### The Problem
 Existing recording software like OBS have a feature which allows the webcam to be displayed in a separate window but with their feature if you click on any web page or software then the window will go behind the web page or software instead of staying on top of the page. My Camera Window stays on top of the page at all times including when the cursor is clicked.
