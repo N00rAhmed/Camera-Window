@@ -4,10 +4,10 @@
 This project accesses your laptops built in webcam and displays it in a window. It's a very simple project because it was meant to address a problem that I was having. For creating the `.exe` InnoSetup was used.
 
 ### The Problem
-Existing recording software like OBS have a 
+Existing recording software like OBS have a feature which allows the webcam to be displayed in a separate window but with their feature if you click on any web page or software then the window will go behind the web page or software instead of staying on top of the page. My Camera Window stays on top of the page at all times including when the cursor is clicked.
 
 ### Languages/Tools
-C, SDL3, Visual Studio
+C, SDL3, Visual Studio, CLion, CMakeLists, Linux
 
 ### Demo
 https://github.com/user-attachments/assets/1ad55b65-1c1c-4773-9ee5-00284807b2e2
@@ -38,3 +38,5 @@ https://wiki.libsdl.org/SDL3/SDL_SetWindowResizable
 https://stackoverflow.com/questions/79386427/resizing-a-borderless-window-is-not-working-in-sdl3
 
 https://wiki.libsdl.org/SDL2/SDL_SetWindowBordered
+
+https://stackoverflow.com/questions/80016665/sdl3-camera-api-unable-to-access-window-shows-green-screen-on-linux
