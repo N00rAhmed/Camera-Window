@@ -42,4 +42,4 @@ https://wiki.libsdl.org/SDL2/SDL_SetWindowBordered
 
 https://stackoverflow.com/questions/80016665/sdl3-camera-api-unable-to-access-window-shows-green-screen-on-linux
 
-https://discourse.libsdl.org/t/sdl3-camera/50347/2
+https://discourse.libsdl.org/t/sdl3-camera/50347
