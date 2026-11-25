@@ -1,7 +1,10 @@
 # Camera Window
 
 ### Introduction
-This project creates a window that accesses your laptops camera. It's a very simple project because it was meant to address a problem that I was having with OBS. For creating the `.exe` InnoSetup was used.
+This project accesses your laptops built in webcam and displays it in a window. It's a very simple project because it was meant to address a problem that I was having. For creating the `.exe` InnoSetup was used.
+
+### The Problem
+Existing recording software like OBS have a 
 
 ### Languages/Tools
 C, SDL3, Visual Studio
