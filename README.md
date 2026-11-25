@@ -7,7 +7,7 @@ This project accesses your laptops built in webcam and displays it in a window. 
 Existing recording software like OBS have a feature which allows the webcam to be displayed in a separate window but with their feature if you click on any web page or software then the window will go behind the web page or software instead of staying on top of the page. My Camera Window stays on top of the page at all times including when the cursor is clicked.
 
 ### Languages/Tools
-C, SDL3, Visual Studio, CLion, CMakeLists, Linux
+C, SDL3, Visual Studio, CLion, CMakeLists, Linux, InnoSetup
 
 ### Demo
 https://github.com/user-attachments/assets/1ad55b65-1c1c-4773-9ee5-00284807b2e2
