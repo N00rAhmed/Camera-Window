@@ -12,6 +12,12 @@ C, SDL3, Visual Studio, CLion, CMakeLists, Linux, InnoSetup
 ### Demo
 <img width="1920" height="1080" alt="2026-11-25 01-49-47" src="https://github.com/user-attachments/assets/1bf45a1e-9203-4c1d-85f0-51352bf9494f" />
 
+### Features
+- [x] Webcam Access
+- [x] Window Stays on Top
+- [x] Resizable Window
+- [ ] Draggable from Window Area 
+- [ ] Borderless Window
 
 ### TroubleShooting
 i was getting this error when opening exe on diffrent laptop `the code execution cannot proceed because Ucrtbased.dll was not found`. realised reason for this was that I compiled project in Debug Mode in Visual Studio. In Debug Mode this dependency is used `Ucrtbased.dll`. This dependencies isnt installed by default on windows machines which is why the error was caused. In order to fix this issue you need to switch to Release. In Release `ucrt.dll` is used which is found by default on all windows machines.
