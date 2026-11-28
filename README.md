@@ -34,7 +34,7 @@ and rebuild solution
 
 This should have created a `Release` folder where the new exe will be present. Use this new exe file to compile the exe for distribution.
 
-### Links
+### Resources
 
 https://www.youtube.com/watch?v=nvDLBM0l7nA
 
