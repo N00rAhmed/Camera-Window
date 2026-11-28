@@ -55,3 +55,7 @@ https://discourse.libsdl.org/t/sdl3-camera/50347
 https://wiki.libsdl.org/SDL3/SDL_HitTestResult
 
 https://www.youtube.com/watch?v=1S5qlQ7U34M
+
+https://gist.github.com/erikyuzwa/b2793947896b9ce43cab9562b1a58cec
+
+https://github.com/libsdl-org/SDL_helloworld
