@@ -53,3 +53,5 @@ https://stackoverflow.com/questions/80016665/sdl3-camera-api-unable-to-access-wi
 https://discourse.libsdl.org/t/sdl3-camera/50347
 
 https://wiki.libsdl.org/SDL3/SDL_HitTestResult
+
+https://www.youtube.com/watch?v=1S5qlQ7U34M
